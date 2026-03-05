@@ -1,0 +1,49 @@
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vince Falconer Level 4 DevOps Engineer</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            transition: background-color 0.5s ease;
+        }
+        .banner {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">Vince Falconer Level 4 DevOps Engineer</div>
+
+    <button onclick="changeColour()">Change Background Colour</button>
+
+    <script>
+        function changeColour() {
+            const colours = ["#1abc9c", "#3498db", "#9b59b6", "#e67e22", "#c0392b", "#2ecc71", "#2c3e50"];
+            document.body.style.backgroundColor = colours[Math.floor(Math.random() * colours.length)];
+        }
+    </script>
+</body>
+</html>
+"""
+
+# Write the HTML to index.html
+with open("python-website-index.html", "w") as file:
+    file.write(html_content)
+
+print("python-website-index.html has been created!")
